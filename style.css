@@ -131,7 +131,6 @@ header{
     flex-direction: column;
     padding: 70px 0 0 110px;
     width: 75%;
-    gap: 20px;
     border-right: 1px solid #1b1b1b;
 }
 
@@ -158,19 +157,12 @@ header{
     font-size: 40px;
 }
 
-
-
-
-
-
-
 #work{
     display: flex;
     flex-direction: column;
     background-color: #e2e2e2;
-   
     width: 100%;
-    margin-bottom: 120px;
+    
 }
 
 #work h2{
@@ -183,18 +175,16 @@ header{
 #work .project{
     display: flex;
     flex-direction: row;
-    margin-bottom: 80px;
-   
-    
+    margin-bottom: 140px;
 }
 
 #work .project .text{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    justify-content: center;
+    height: 300px;
+    width: 78%;
     padding-left: 110px;
-    border: 1px #1b1b1b solid;
-  
 }
 
 #work .project .text .title{
@@ -202,71 +192,128 @@ header{
     flex-direction: row;
     align-items: center; 
     gap: 30px;
+    
 }
 
 #work .project .text .title h3{
     font-size: 30px;
+    font-weight: bolder;
+    margin: 0;
 }
 
 #work .project .text .title h4{
     font-size: 20px;
-    margin-top:  5px;
     color: #868686;
 }
 
 #work .project .paragraph{
-    width: 70%
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
 #work .project .text a button{
     padding: 5px 25px;
     font-size: 18px;
+    font-weight: 600;
 }
 
 #work .project .image{
-    width: 40%;
-    margin-top: 20px;
-    padding-right: 110px;
-    border: 1px #1b1b1b solid
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 300px;
 }
 
 #work .project .image img{
     height: 100%;
-    width: 100%
+    width: 80%
 }
-
 
 
 #about{
-    height:750px;
+    height:700px;
     width: 100%;
-    background-color: #e2e2e2;
-    
+    background-image: url(./images/89965d73-447b-4344-b393-da9bd03732ad.jpg);
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
 }
-
-
 
 #about  .text{
     display: flex;
+    position: static;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end; 
-    background-color: rgb(33, 176, 128);  
+    margin-right: 200px;
 }
 
 #about .text h3{
-    width: 300px;
+    margin: 60px 0 0 0;
+    width: 400px;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 70px;
+    
+}
+
+#about .text span{
+    font-weight: bold;
+    font-size: 62px;
 }
 
 #about  .text p{
-    width: 300px;
+    width: 400px;
+    height: 300px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+    
 }
 
 #about .text a{
-    width: 300px;
+    margin-top: 40px;
+    width: 400px;
 }
 
+#about .text a button{
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    color: #e2e2e2;
+    background-color: #080808;
 
+}
 
+#contact .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0;
 
+    
+ 
+}
+
+#contact .text h3{
+    margin: 0;
+    width: 1274px;
+    height: 97px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+    text-align: center;
+}
+
+#contact .text p{
+    width: 1240px;
+    height: 80px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#contact .text p span{
+    font-weight: bolder;
+}
