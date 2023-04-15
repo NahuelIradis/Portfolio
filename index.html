@@ -7,44 +7,73 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>Nahuel Iradis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+    <title>Front-End Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">Nahuel Iradis</a>
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="#">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">
-                        <img src="./images/linkedin 1.svg" alt="">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">
-                        <img src="./images/github 2.svg" alt="">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="phone">
-                        <img src="./images/phone-transformed 1.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+
+    <input type="checkbox" id="toggle">
+
+    <nav class="navbar">
+
+      
+        <label class="navbar-toggler" for="toggle" id="hamburger">
+            <div class="container">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+        </label>
+
+
+        <ul class="nav-list">
+
+            <li class="logo">
+                <a href="#hero" >Nahuel Iradis</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#hero">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#work">Work</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/nahuel-iradis/" class="linkedin" target="_blank">
+                    <img src="./images/linkedin 1.svg" alt="linkedin logo">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://github.com/NahuelIradis" class="github" target="_blank">
+                    <img src="./images/github 2.svg" alt="github logo">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="tel: +5493513506274" class="phone" target="_blank">
+                    <img src="./images/phone-transformed 1.svg" alt="phone logo">
+                 </a>
+               </li>
+
+               <li class="nav-item">
+                <a href="">
+                    <img src="./images/phone-transformed 1.svg" alt="phone logo">
+                 </a>
+               </li>   
+
+        </ul>
+    </nav>
+    
 
     <section id="hero">
         <div class="text">
             <h1 class="title">CREATIVE DEVELOP & DESIGN</h1>
             <p class="tagline">Clean and Simple Code and Designs with a Creative Flair</p>
-            <a href="#">
+            <a href="tel:+5493513506274">
                 <button>Get in touch</button>
             </a>
         </div>
@@ -57,133 +86,182 @@
     <section id="btf">
         <div class="text">
             <h2 class="title">What do I help?</h2>
-            <p>As a Front-end Developer & Systems Engineering student, I’m passionate about creating clean and simple design  and code that makes a lasting impression. Over the past year, I’ve honed my skill and gained valuable experience working as a freelance developer and designer with a diverse array of clients and exciting businesses, to deliver high-quality work that meets their unique needs and helps them achieve their goals.</p>
-        </div>
-
-        <div class="skills">
-            <h3>Skills.</h3>
+            <p>As a Front-end Developer & Systems Engineering student, I’m passionate about creating clean and simple design  and code that makes a lasting impression. <br>Over the past year, I’ve honed my skill and gained valuable experience working as a freelance developer and designer with a diverse array of clients and exciting businesses, to deliver high-quality work that meets their unique needs and helps them achieve their goals.</p>
         </div>
     </section>
 
     <section id="work">
-        <h2>Selected Work</h2>
+        <div class="projects">
 
-        <div class="project">
-
-            <div class="text">
-                <div class="title">
-                    <h3>Landing Page</h3>
-                    <h4>Web Development</h4>
-                </div>
-
-                <div class="paragraph">
-                    <p>I created a Landing Page website using HTML5, CSS3, and JavaScript, implementing best coding practices throughout the development process. I prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) best practices top of mind to ensure the final product was of high quality and met the needs of the users.</p>
-                </div>
-                
-                <a href="#">
-                    <button>View Project</button>
-                </a>
+            <div class="section-title">
+                <h2>Selected Work.</h2>
             </div>
 
-            <div class="image">
-                <img src="./images/github 2.svg" alt="">
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h3>Landing Page</h3>
+                        <h4>Web Development</h4>
+                    </div>
+    
+                    <div class="paragraph">
+                        <p>I created a Landing Page website using HTML5, CSS3, and JavaScript, implementing best coding practices throughout the development process. I prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) best practices top of mind to ensure the final product was of high quality and met the needs of the client.</p>
+                    </div>
+                    
+                    <a href="#">
+                        <button>View Project</button>
+                    </a>
+                </div>
+    
+                <div class="image">
+                    <img src="./images/github 2.svg" alt="">
+                </div>
             </div>
+
+            <div class="project" id="right">
+                <div class="text">
+                    <div class="title">
+                        <h3>Business Logo</h3>
+                        <h4>Brand Identity</h4>
+                    </div>
+    
+                    <div class="paragraph">
+                        <p>I created a custom logo for a new business, applying my knowledge of design principles, color theory, and typography fundamentals. With a focus on meeting my client's needs, I combined these foundational elements with my own creative flair to produce a final product that exceeded expectations.</p>
+                    </div>
+                    
+                    <a href="#">
+                        <button>View Project</button>
+                    </a>
+                </div>
+    
+                <div class="image">
+                    <img src="./images/github 2.svg" alt="">
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h3>Business Rebrand</h3>
+                        <h4>Brand Identity</h4>
+                    </div>
+    
+                    <div class="paragraph">
+                        <p>I undertook a rebranding project that involved developing a new logo and designing social media templates. Throughout the project, I drew on my knowledge of design principles, typography fundamentals, and color theory, while also incorporating my own creative ideas. The result was a cohesive and visually striking brand identity that effectively communicated the business's personality.</p>
+                    </div>
+                    
+                    <a href="#">
+                        <button>View Project</button>
+                    </a>
+                </div>
+    
+                <div class="image">
+                    <img src="./images/github 2.svg" alt="">
+                </div>
+            </div>
+
         </div>
+       
 
-        <div class="project">
-            <div class="text">
-                <div class="title">
-                    <h3>Landing Page</h3>
-                    <h4>Web Development</h4>
+
+       
+
+        
+        <div class="skills">
+            <h3>Skills.</h3>
+        
+            <div class="cards">
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
                 </div>
-
-                <div class="paragraph">
-                    <p>I created a Landing Page website using HTML5, CSS3, and JavaScript, implementing best coding practices throughout the development process. I prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) best practices top of mind to ensure the final product was of high quality and met the needs of the users.</p>
+        
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
                 </div>
-                
-                <a href="#">
-                    <button>View Project</button>
-                </a>
-            </div>
-
-            <div class="image">
-                <img src="./images/github 2.svg" alt="">
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="text">
-                <div class="title">
-                    <h3>Landing Page</h3>
-                    <h4>Web Development</h4>
+        
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
                 </div>
-
-                <div class="paragraph">
-                    <p>I created a Landing Page website using HTML5, CSS3, and JavaScript, implementing best coding practices throughout the development process. I prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) best practices top of mind to ensure the final product was of high quality and met the needs of the users.</p>
+        
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
                 </div>
-                
-                <a href="#">
-                    <button>View Project</button>
-                </a>
+        
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/github 2.svg" alt="">
+                    <p>Github</p>
+                </div>
             </div>
-
-            <div class="image">
-                <img src="./images/github 2.svg" alt="">
-            </div>
-        </div>
     </section>
        
     <section id="about">
-
         <div class="container"></div>
-
         <div class="text">
             <h3>What am I all <span>about.</span></h3>
-            <p>As a Front-end Developer & Systems Engineering student, I’m passionate about creating clean and simple design  and code that makes a lasting impression. Over the past year, I’ve honed my skill and gained valuable experience working as a freelance developer and designer with a diverse array of clients and exciting businesses, to deliver high-quality work that meets their unique needs and helps them achieve their goals.</p>
-            <a href="#">
+            <p>I am a motivated 23-year-old student with a strong drive to achieve my goals in life.<br>Just as I apply myself diligently to my academic and professional pursuits, I am equally committed to maintaining a healthy and active lifestyle. <br>In recent years, I have developed a passion for fitness and have taken an interest in psychology, mental health, and self-improvement. <br>My goal is to cultivate both physical and mental strength, and to continue to grow and develop as a well-rounded individual.</p>
+            <a href="tel:+5493513506274">
                 <button>Get in touch</button>
             </a>
-            
-    </div>
-
-    </section>
-
-    <section id="contact">
-        <div class="text">
-            <h3>Don't be a stranger</h3>
-            <p>I’m an active member on some of the social medias. Feel free to follow me, comment, or message me. I’m excited to hear from you.
-                    Or email me at <span>nahueliradis28@gmail.com</span> </p>
         </div>
     </section>
 
     <section id="footer">
-        <div class="text">
-            <div class="title">
-                <h3>Nahuel Iradis</h3>
-            </div>
 
-            <div class="content">
-                <ul>
-                    <li>Work</li>
-                    <li>About</li>
-                </ul>
-
-                <ul>
-                    <li>Github</li>
-                    <li>LinkedIn</li>
-                    <li>nahueliradis28@gmail.com</li>
-                    <li>+549 351 3506274</li>
-                </ul>
-            </div>
+        <div class="contact">
+            <h3>Don't be a stranger.</h3>
+            <p>I’m an active member on some of the social medias. Feel free to follow me, comment, or message me. I’m excited to hear from you. Or email me at <span>nahueliradis28@gmail.com</span> </p>
         </div>
 
-        <div class="text-rigth">
-            <p>All work @2023 was made by Nahuel Iradis @ Cordoba, Argentina. </p>
-            <p>Thanks for looking.</p>
-            
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/nahuel-iradis/" target="_blank">
+                        <img src="./images/linkedin 1.svg" alt="linkedin logo">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/NahuelIradis" target="_blank">
+                        <img src="./images/github 2.svg" alt="github logo">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/NahuelIradis" target="_blank">
+                        <img src="./images/github 2.svg" alt="github logo">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tel: +5493513506274" class="phone">
+                        <img src="./images/phone-transformed 1.svg" alt="phone logo">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="text-right">
+                <h4>All work &copy  2023 was made by Nahuel Iradis @ Cordoba, Argentina.</h4>
+                <p>Thanks for looking.</p>
+            </div>
+
         </div>
+
+        
     </section>
   
+    <script src="script.js"></script>
 
 
   
