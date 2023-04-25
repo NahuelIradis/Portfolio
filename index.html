@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,78 +8,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    
     <title>Front-End Portfolio</title>
 </head>
-<body>
 
+<body>
     <input type="checkbox" id="toggle">
 
     <nav class="navbar">
-
-      
-        <label class="navbar-toggler" for="toggle" id="hamburger">
-            <div class="container">
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
-            </div>
-        </label>
-
+        <div class="back-menu" id="back-menu"></div>
+        <div class="logo">
+            <a href="#hero" >Nahuel Iradis</a>
+        </div>
 
         <ul class="nav-list">
-
-            <li class="logo">
-                <a href="#hero" >Nahuel Iradis</a>
-            </li>
-
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a href="#hero">Home</a>
             </li>
-
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a href="#work">Work</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a href="#about">About</a>
             </li>
-            <li class="nav-item">
-                <a href="https://www.linkedin.com/in/nahuel-iradis/" class="linkedin" target="_blank">
-                    <img src="./images/linkedin 1.svg" alt="linkedin logo">
+            <li class="nav-item ">
+                <a href="#footer">Contact</a>
+            </li>
+            <li class="nav-item image">
+                <a href="https://www.linkedin.com/in/nahuel-iradis/"target="_blank">
+                    <img src="./images/linkedin-transformed.png" alt="linkedin logo">
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="https://github.com/NahuelIradis" class="github" target="_blank">
-                    <img src="./images/github 2.svg" alt="github logo">
+            <li class="nav-item image">
+                <a href="https://github.com/NahuelIradis" target="_blank">
+                    <img src="./images/github-sign-transformed.png" alt="github logo">
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="tel: +5493513506274" class="phone" target="_blank">
-                    <img src="./images/phone-transformed 1.svg" alt="phone logo">
+            <li class="nav-item image">
+                <a href="tel: +5493513506274"  target="_blank">
+                    <img src="./images/viber_(1)-transformed.png" alt="phone logo">
                  </a>
                </li>
-
-               <li class="nav-item">
-                <a href="">
-                    <img src="./images/phone-transformed 1.svg" alt="phone logo">
+            <li class="nav-item image">
+                <a href="mailto:nahueliradis28@gmail.com" target="_blank">
+                    <img src="./images/apple-H5pTuT_y--transformed.png" alt="mail logo">
                  </a>
-               </li>   
-
+            </li>   
         </ul>
+
+        <button class="dark-mode-btn">
+            <img src="./images/moon.png" id="icon" alt="">
+        </button>
+
+        
+     
+            
+        <label for="toggle">
+            <div class="bars__menu">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
+            </div>
+        </label>   
     </nav>
     
-
     <section id="hero">
         <div class="text">
             <h1 class="title">CREATIVE DEVELOP & DESIGN</h1>
             <p class="tagline">Clean and Simple Code and Designs with a Creative Flair</p>
-            <a href="tel:+5493513506274">
+            <a href="mailto:nahueliradis28@gmail.com">
                 <button>Get in touch</button>
             </a>
         </div>
 
         <div class="image">
-            <img src="./images/66731d71-e98a-4694-83be-48fe46b620df.jpg" alt="">
+            <img src="./images/1b0340f2-c8bb-404d-b866-18c72697805b.jpg" alt="">
         </div>
     </section>
 
@@ -88,6 +90,42 @@
             <h2 class="title">What do I help?</h2>
             <p>As a Front-end Developer & Systems Engineering student, I’m passionate about creating clean and simple design  and code that makes a lasting impression. <br>Over the past year, I’ve honed my skill and gained valuable experience working as a freelance developer and designer with a diverse array of clients and exciting businesses, to deliver high-quality work that meets their unique needs and helps them achieve their goals.</p>
         </div>
+    </section>
+
+
+
+    <section id="skills">
+        <h3>Skills.</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="./images/html.png" alt="">
+                    <p>HTML5</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/css-3.png" alt="">
+                    <p>CSS3</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/java-script.png" alt="">
+                    <p>JavaScript</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/github-sign.png" alt="">
+                    <p>Github</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/figma.png" alt="">
+                    <p>Figma</p>
+                </div>
+        
+                <div class="card">
+                    <img src="./images/trello.png" alt="">
+                    <p>Trello</p>
+                </div>
     </section>
 
     <section id="work">
@@ -114,7 +152,7 @@
                 </div>
     
                 <div class="image">
-                    <img src="./images/github 2.svg" alt="">
+                    <img src="./images/Capture 1.png" alt="">
                 </div>
             </div>
 
@@ -135,7 +173,7 @@
                 </div>
     
                 <div class="image">
-                    <img src="./images/github 2.svg" alt="">
+                    <img src="./images/Capture 1.png" alt="">
                 </div>
             </div>
 
@@ -156,49 +194,46 @@
                 </div>
     
                 <div class="image">
-                    <img src="./images/github 2.svg" alt="">
+                    <img src="./images/Capture 1.png" alt="">
                 </div>
             </div>
 
+            
+
         </div>
        
-
-
-       
-
-        
         <div class="skills">
             <h3>Skills.</h3>
         
             <div class="cards">
                 <div class="card">
-                    <img src="./images/github 2.svg" alt="">
-                    <p>Github</p>
+                    <img src="./images/html.png" alt="html5 logo">
+                    <p>HTML5</p>
                 </div>
         
                 <div class="card">
-                    <img src="./images/github 2.svg" alt="">
-                    <p>Github</p>
+                    <img src="./images/css-3.png" alt="css3 logo">
+                    <p>CSS3</p>
                 </div>
         
                 <div class="card">
-                    <img src="./images/github 2.svg" alt="">
-                    <p>Github</p>
+                    <img src="./images/1bd0c01a-ce9b-4e99-99a6-c90198169bcb-transformed.png" alt="javascript logo">
+                    <p>JavaScript</p>
                 </div>
         
                 <div class="card">
-                    <img src="./images/github 2.svg" alt="">
+                    <img src="./images/github-sign-transformed.png" alt="github logo">
                     <p>Github</p>
                 </div>
         
-                <div class="card">
-                    <img src="./images/github 2.svg" alt="">
-                    <p>Github</p>
+                <div class="card" id="figma">
+                    <img src="./images/figma-transformed.png" alt="figma logo">
+                    <p>Figma</p>
                 </div>
         
                 <div class="card">
-                    <img src="./images/github 2.svg" alt="">
-                    <p>Github</p>
+                    <img src="./images/trello-transformed.png" alt="trello logo">
+                    <p>Trello</p>
                 </div>
             </div>
     </section>
@@ -208,7 +243,7 @@
         <div class="text">
             <h3>What am I all <span>about.</span></h3>
             <p>I am a motivated 23-year-old student with a strong drive to achieve my goals in life.<br>Just as I apply myself diligently to my academic and professional pursuits, I am equally committed to maintaining a healthy and active lifestyle. <br>In recent years, I have developed a passion for fitness and have taken an interest in psychology, mental health, and self-improvement. <br>My goal is to cultivate both physical and mental strength, and to continue to grow and develop as a well-rounded individual.</p>
-            <a href="tel:+5493513506274">
+            <a href="mailto:nahueliradis28@gmail.com">
                 <button>Get in touch</button>
             </a>
         </div>
@@ -223,30 +258,25 @@
 
         <div class="nav">
             <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about">About</a>
-                </li>
+               
                 <li class="nav-item">
                     <a href="https://www.linkedin.com/in/nahuel-iradis/" target="_blank">
-                        <img src="./images/linkedin 1.svg" alt="linkedin logo">
+                        <img src="./images/linkedin-transformed.png" alt="linkedin logo">
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://github.com/NahuelIradis" target="_blank">
-                        <img src="./images/github 2.svg" alt="github logo">
+                        <img src="./images/github-sign-transformed.png" alt="github logo">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/NahuelIradis" target="_blank">
-                        <img src="./images/github 2.svg" alt="github logo">
+                    <a href="tel: +5493513506274" target="_blank">
+                        <img src="./images/viber_(1)-transformed.png" alt="phone logo">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="tel: +5493513506274" class="phone">
-                        <img src="./images/phone-transformed 1.svg" alt="phone logo">
+                    <a href="mailto:nahueliradis28@gmail.com" class="phone">
+                        <img src="./images/apple-H5pTuT_y--transformed.png" alt="mail logo">
                     </a>
                 </li>
             </ul>
@@ -262,9 +292,11 @@
     </section>
   
     <script src="script.js"></script>
+    <script src="theme.js"></script>
 
 
   
 
 </body>
 </html>
+
