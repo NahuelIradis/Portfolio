@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,296 +7,335 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <title>Front-End Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>Nahuel Iradis</title>
 </head>
-
 <body>
+
     <input type="checkbox" id="toggle">
 
-    <nav class="navbar">
+    <header class="header">
         <div class="back-menu" id="back-menu"></div>
-        <div class="logo">
-            <a href="#hero" >Nahuel Iradis</a>
+        <a href="#hero" class="logo">Nahuel Iradis</a>
+
+        <div class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#work">WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#footer">CONTACT</a>
+                </li>
+
+               
+                
+            </ul>
         </div>
 
-        <ul class="nav-list">
-            <li class="nav-item ">
-                <a href="#hero">Home</a>
-            </li>
-            <li class="nav-item ">
-                <a href="#work">Work</a>
-            </li>
-            <li class="nav-item ">
-                <a href="#about">About</a>
-            </li>
-            <li class="nav-item ">
-                <a href="#footer">Contact</a>
-            </li>
-            <li class="nav-item image">
-                <a href="https://www.linkedin.com/in/nahuel-iradis/"target="_blank">
-                    <img src="./images/linkedin-transformed.png" alt="linkedin logo">
-                </a>
-            </li>
-            <li class="nav-item image">
-                <a href="https://github.com/NahuelIradis" target="_blank">
-                    <img src="./images/github-sign-transformed.png" alt="github logo">
-                </a>
-            </li>
-            <li class="nav-item image">
-                <a href="tel: +5493513506274"  target="_blank">
-                    <img src="./images/viber_(1)-transformed.png" alt="phone logo">
-                 </a>
-               </li>
-            <li class="nav-item image">
-                <a href="mailto:nahueliradis28@gmail.com" target="_blank">
-                    <img src="./images/apple-H5pTuT_y--transformed.png" alt="mail logo">
-                 </a>
-            </li>   
-        </ul>
+        <button class="dark-mode-btn" id="button">DARK THEME</button>
 
-        <button class="dark-mode-btn">
-            <img src="./images/moon.png" id="icon" alt="">
-        </button>
+        <label for="toggle" class="menu" id="menu">
+            MENU
+        </label>
+
+    </header>
+
+    <section id="hero">
+        
+        <div class="hero-title">
+            <p class="title">CREATIVE</p>
+            <div class="container">
+                <p class="italic">develop <span class="sign">&</span></p>
+                
+                <div class="image">
+                    <img src="./images/hero4.png" alt="">
+                </div>
+            </div>
+            <p class="span-3">DESIGN</p>
+        </div>
+
+        <div class="mobile-img">
+            <img src="./images/hero-mobile.png" alt="">
+        </div>
+            
+        <div class="tagline">
+            <p>CLEAN AND SIMPLE CODE AND DESIGN WITH A CREATIVE FLAIR</p>
+        </div>
+
 
         
-     
-            
-        <label for="toggle">
-            <div class="bars__menu">
-                <span class="line1__bars-menu"></span>
-                <span class="line2__bars-menu"></span>
-                <span class="line3__bars-menu"></span>
-            </div>
-        </label>   
-    </nav>
-    
-    <section id="hero">
-        <div class="text">
-            <h1 class="title">CREATIVE DEVELOP & DESIGN</h1>
-            <p class="tagline">Clean and Simple Code and Designs with a Creative Flair</p>
-            <a href="mailto:nahueliradis28@gmail.com">
-                <button>Get in touch</button>
-            </a>
-        </div>
-
-        <div class="image">
-            <img src="./images/1b0340f2-c8bb-404d-b866-18c72697805b.jpg" alt="">
-        </div>
     </section>
 
     <section id="btf">
         <div class="text">
-            <h2 class="title">What do I help?</h2>
-            <p>As a Front-end Developer & Systems Engineering student, I’m passionate about creating clean and simple design  and code that makes a lasting impression. <br>Over the past year, I’ve honed my skill and gained valuable experience working as a freelance developer and designer with a diverse array of clients and exciting businesses, to deliver high-quality work that meets their unique needs and helps them achieve their goals.</p>
+            <div class="container">
+                <h2 class="title">WHAT DO I<span class="italic">help</span>?</h2>
+            </div>
+            <div class="paragraph"> 
+                <p>I'M A FRONTEND DEVELOPER AND DESIGNER PASSIONATE ABOUT CREATING CLEAN AND SIMPLE CODE THAT MAKES A LASTING IMPRESSION. </p>
+            </div>
         </div>
-    </section>
 
+        <div class="container">
+            <div class="column">
+                <span class="title">I BUILD WEB</span>
+                <span class="italic">experiences</span>
+            </div>
+            
+            <div class="row row-1">
+                <div class="transform"><p>FOR</p></div>
+                <p class="title">DESKTOP AND MOBILE</p>
+            </div>
+            <div class="row row-2">
+                <p class="title">HTML CSS AND JS</p>
+                <div class="icon">
+                    <p>WITH</p>
+                    <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.5" y1="3" x2="2.5" y2="33" stroke="currentColor" stroke-width="3"/>
+                        <line x1="1" y1="31.5" x2="31" y2="31.5" stroke="currentColor" stroke-width="3"/>
+                        <line x1="1.90342" y1="31.9765" x2="29.9034" y2="1.97652" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                </div>
+            </div>
+        </div>
 
+    
+        <ul class="skills">
+            <div class="title">
+                <li class="item">RELATED</li>
+                <li class="item italic">skills.</li>
+            </div>
+            <li class="item">SASS</li>
+            <li class="item">GIT</li>
+            <li class="item">GITHUB</li>
+            <li class="item">FIGMA</li>
+            <li class="item">TRELLO</li>
+        </ul>
+        
 
-    <section id="skills">
-        <h3>Skills.</h3>
-            <div class="cards">
-                <div class="card">
-                    <img src="./images/html.png" alt="">
-                    <p>HTML5</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/css-3.png" alt="">
-                    <p>CSS3</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/java-script.png" alt="">
-                    <p>JavaScript</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/github-sign.png" alt="">
-                    <p>Github</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/figma.png" alt="">
-                    <p>Figma</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/trello.png" alt="">
-                    <p>Trello</p>
-                </div>
+            
     </section>
 
     <section id="work">
+        <div class="selected-work">
+            <div class="title">
+                <p>SELECTED</p>
+            </div>
+          
+            <div class="container">
+                <p class="italic">work.</p>
+                <p>OVER THE PAST YEAR, I'VE HONED MY SKILL AND GAINED EXPERIENCE WORKING AS A FREELANCER WITH A DIVERSE ARRAY OF CLIENTS AND EXCITING BUSINESSES, TO DELIVER HIGH-QUALITY WORK THAT MEETS THEIR UNIQUE NEEDS AND HELPS THEM ACHIEVE THEIR GOALS. </p>
+            </div>
+        </div>
+        
+
+        
         <div class="projects">
 
-            <div class="section-title">
-                <h2>Selected Work.</h2>
+            <div class="project">
+
+                <div class="project-container">
+
+                    <div class="text">
+                        <p class="title">LANDING<br>PAGE</p>
+            
+                        <div class="subtitle">WEB DEVELOPMENT</div>
+            
+                        <div class="paragraph">
+                            <p >I’ve implemented the best coding practices throughout the development process, prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) fundamentals to ensure that the final product was of high quality and met the needs of the client.</p>
+                        </div>
+
+                        <div class="links">
+                            <div class="link">
+                                <a href="">LIVE</a>
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="17" x2="17" y2="16" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="2" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="1.33719" y1="15.2512" x2="17.2533" y2="1.16275" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                            </div>
+            
+                            <div class="link">
+                                <a href="">CODE</a>
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="17" x2="17" y2="16" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="2" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="1.33719" y1="15.2512" x2="17.2533" y2="1.16275" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="image">
+                        <img src="./images/github 2.svg" alt="">
+                    </div>
+
+                </div>
+            
             </div>
+
 
             <div class="project">
-                <div class="text">
-                    <div class="title">
-                        <h3>Landing Page</h3>
-                        <h4>Web Development</h4>
-                    </div>
-    
-                    <div class="paragraph">
-                        <p>I created a Landing Page website using HTML5, CSS3, and JavaScript, implementing best coding practices throughout the development process. I prioritized responsive design principles and kept User Experience (UX) and User Interface (UI) best practices top of mind to ensure the final product was of high quality and met the needs of the client.</p>
-                    </div>
-                    
-                    <a href="#">
-                        <button>View Project</button>
-                    </a>
-                </div>
-    
-                <div class="image">
-                    <img src="./images/Capture 1.png" alt="">
-                </div>
-            </div>
 
-            <div class="project" id="right">
-                <div class="text">
-                    <div class="title">
-                        <h3>Business Logo</h3>
-                        <h4>Brand Identity</h4>
-                    </div>
-    
-                    <div class="paragraph">
-                        <p>I created a custom logo for a new business, applying my knowledge of design principles, color theory, and typography fundamentals. With a focus on meeting my client's needs, I combined these foundational elements with my own creative flair to produce a final product that exceeded expectations.</p>
-                    </div>
-                    
-                    <a href="#">
-                        <button>View Project</button>
-                    </a>
-                </div>
-    
-                <div class="image">
-                    <img src="./images/Capture 1.png" alt="">
-                </div>
-            </div>
+                <div class="project-container">
 
-            <div class="project">
-                <div class="text">
-                    <div class="title">
-                        <h3>Business Rebrand</h3>
-                        <h4>Brand Identity</h4>
-                    </div>
-    
-                    <div class="paragraph">
-                        <p>I undertook a rebranding project that involved developing a new logo and designing social media templates. Throughout the project, I drew on my knowledge of design principles, typography fundamentals, and color theory, while also incorporating my own creative ideas. The result was a cohesive and visually striking brand identity that effectively communicated the business's personality.</p>
-                    </div>
-                    
-                    <a href="#">
-                        <button>View Project</button>
-                    </a>
-                </div>
-    
-                <div class="image">
-                    <img src="./images/Capture 1.png" alt="">
-                </div>
-            </div>
+                    <div class="text">
+                        <p class="title">BRAND<br>LOGO</p>
+            
+                        <div class="subtitle">BRAND IDENTITY</div>
+            
+                        <div class="paragraph">
+                            <p >I created a custom logo for a new business, applying my knowledge of design principles, color theory, and typography fundamentals. With a focus on meeting my client's needs, I combined these foundational elements with my own creative flair to produce a final product that exceeded expectations.</p>
+                        </div>
 
+                        <div class="links">
+                            <div class="link">
+                                <a href="">BEHANCE</a>
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="17" x2="17" y2="16" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="2" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="1.33719" y1="15.2512" x2="17.2533" y2="1.16275" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="image">
+                        <img src="./images/github 2.svg" alt="">
+                    </div>
+
+                </div>
+            
+            </div>
             
 
-        </div>
-       
-        <div class="skills">
-            <h3>Skills.</h3>
-        
-            <div class="cards">
-                <div class="card">
-                    <img src="./images/html.png" alt="html5 logo">
-                    <p>HTML5</p>
+            <div class="project">
+
+                <div class="project-container">
+
+                    <div class="text">
+                        <p class="title">REBRAND</p>
+            
+                        <div class="subtitle">BRAND IDENTITY</div>
+            
+                        <div class="paragraph">
+                            <p >I created a custom logo for a new business, applying my knowledge of design principles, color theory, and typography fundamentals. With a focus on meeting my client's needs, I combined these foundational elements with my own creative flair to produce a final product that exceeded expectations.</p>
+                        </div>
+
+                        <div class="links">
+                            <div class="link">
+                                <a href="">BEHANCE</a>
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="17" x2="17" y2="16" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="2" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="1.33719" y1="15.2512" x2="17.2533" y2="1.16275" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="image">
+                        <img src="./images/github 2.svg" alt="">
+                    </div>
+
                 </div>
-        
-                <div class="card">
-                    <img src="./images/css-3.png" alt="css3 logo">
-                    <p>CSS3</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/1bd0c01a-ce9b-4e99-99a6-c90198169bcb-transformed.png" alt="javascript logo">
-                    <p>JavaScript</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/github-sign-transformed.png" alt="github logo">
-                    <p>Github</p>
-                </div>
-        
-                <div class="card" id="figma">
-                    <img src="./images/figma-transformed.png" alt="figma logo">
-                    <p>Figma</p>
-                </div>
-        
-                <div class="card">
-                    <img src="./images/trello-transformed.png" alt="trello logo">
-                    <p>Trello</p>
-                </div>
+            
             </div>
-    </section>
-       
-    <section id="about">
-        <div class="container"></div>
-        <div class="text">
-            <h3>What am I all <span>about.</span></h3>
-            <p>I am a motivated 23-year-old student with a strong drive to achieve my goals in life.<br>Just as I apply myself diligently to my academic and professional pursuits, I am equally committed to maintaining a healthy and active lifestyle. <br>In recent years, I have developed a passion for fitness and have taken an interest in psychology, mental health, and self-improvement. <br>My goal is to cultivate both physical and mental strength, and to continue to grow and develop as a well-rounded individual.</p>
-            <a href="mailto:nahueliradis28@gmail.com">
-                <button>Get in touch</button>
-            </a>
+            
+            
+            
+
+            
+                   
+            
+            
         </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section id="about">
+        <div class="about-container">
+                <p class="title">WHAT AM</p>
+        <div class="container">
+            <div class="container-2">
+                <p class="title">I ALL<br><span>about.</span></p>
+            </div>
+            <div class="image">
+                <img src="./images/about.jpg" alt="">
+                <img class="mobile-img"src="./images/about-mobile.png" alt="">
+            </div>
+            <p class="paragraph">I am a motivated 23-year-old student with a strong drive to achieve my goals in life.<br>Just as I apply myself diligently to my academic and professional pursuits, I am equally committed to maintaining a healthy and active lifestyle.</p>
+            
+        </div>
+
+        <div class="paragraphs">
+            <p class="paragraph-1">I am a motivated 23-year-old student with a strong drive to achieve my goals in life.<br>Just as I apply myself diligently to my academic and professional pursuits, I am equally committed to maintaining a healthy and active lifestyle.</p>
+
+            <p class="paragraph-2">In recent years, I have developed a passion for fitness and have taken an interest in psychology, mental health, and self-improvement.<br>My goal is to cultivate both physical and mental strength, and to continue to grow and develop as a well-rounded individual.</p>
+        </div>
+        </div>
+        
+        
+        
+        
     </section>
 
     <section id="footer">
-
-        <div class="contact">
-            <h3>Don't be a stranger.</h3>
-            <p>I’m an active member on some of the social medias. Feel free to follow me, comment, or message me. I’m excited to hear from you. Or email me at <span>nahueliradis28@gmail.com</span> </p>
+        <div class="container">
+            
+            <p class="title">DON'T<br> BE A<br><span>stranger</span></p>
+           
+            <div class="container-3">
+                <p class="paragraph">I'M AN ACTIVE MEMBER ON SOME OF THE SOCIAL MEDIAS.<br>FEEL FREE TO FOLLOW OR MESSAGE ME.<br>I'M EXCITED TO HEAR FROM YOU.<br>OR EMAIL ME AT</p>
+                <a href="mailto:nahueliradis28@gmail.com" class="mail">nahueliradis28@gmail.com</a>
+            </div>
         </div>
-
-        <div class="nav">
-            <ul class="nav-list">
-               
-                <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/nahuel-iradis/" target="_blank">
-                        <img src="./images/linkedin-transformed.png" alt="linkedin logo">
-                    </a>
+        
+        <div class="contact">
+            <ul class="nav">
+                <li class="item">
+                    <a href="">LINKEDIN</a>
                 </li>
-                <li class="nav-item">
-                    <a href="https://github.com/NahuelIradis" target="_blank">
-                        <img src="./images/github-sign-transformed.png" alt="github logo">
-                    </a>
+                <li class="item">
+                    <a href="">GITHUB</a>
                 </li>
-                <li class="nav-item">
-                    <a href="tel: +5493513506274" target="_blank">
-                        <img src="./images/viber_(1)-transformed.png" alt="phone logo">
-                    </a>
+                <li class="item">
+                    <a href="">BEHANCE</a>
                 </li>
-                <li class="nav-item">
-                    <a href="mailto:nahueliradis28@gmail.com" class="phone">
-                        <img src="./images/apple-H5pTuT_y--transformed.png" alt="mail logo">
-                    </a>
+                <li class="item">
+                    <a href="">PHONE</a>
                 </li>
             </ul>
+            
+            <p class="copyright"> ALL WORK ©2023 WAS MADE BY NAHUEL IRADIS<br>@ CORDOBA, ARGENTINA.</p>
 
-            <div class="text-right">
-                <h4>All work &copy  2023 was made by Nahuel Iradis @ Cordoba, Argentina.</h4>
-                <p>Thanks for looking.</p>
-            </div>
+            <p class="thanks">THANKS FOR STOPPING BY.</p>
+
 
         </div>
-
-        
     </section>
   
     <script src="script.js"></script>
-    <script src="theme.js"></script>
 
 
   
 
 </body>
 </html>
-
