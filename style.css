@@ -1,7 +1,4 @@
 
-
-
-
     *{
         box-sizing: border-box;
         scroll-behavior: smooth;
@@ -14,6 +11,7 @@
         overflow-x: hidden;
       
     }
+    
     
     ul{
         list-style: none;
@@ -43,6 +41,15 @@
         --secondary-color:#D6D6CE;
         --box-shadow:0 5px 15px rgba(214 214 206 / 25%);
     } 
+
+    @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+    }
     
     .header .back-menu{
         position: fixed;
@@ -67,7 +74,7 @@
         justify-content: space-between;
         align-items: center;
         height: 85px;
-        z-index: 1;
+        z-index: 3;
     }
     
     .header.active{
@@ -75,6 +82,7 @@
         box-shadow:var(--box-shadow);;
         transition: 0.3s;
     }
+
     .header .logo{
         display: flex;
         justify-content: center;
@@ -191,7 +199,7 @@
         background-color: var(--primary-color);
         width: 100%;
         height: 1000px;
-        padding: 0 240px;
+        padding: 120px 220px;
     }
     
     #hero .hero-title{
@@ -199,35 +207,40 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        margin-top: 80px;
+      
         
     }
     
-    #hero  .hero-title  p{
+    #hero  .hero-title  .title{
         font-family: 'Tiro Bangla';
         font-style: normal;
         font-weight: 400;
         font-size: 120px;
-        margin-bottom: -40px;
+        margin-bottom: -20px;
         width: fit-content;
         color: var(--secondary-color);
     }
     #hero  .hero-title .italic{
-        display: flex;
+        font-family: 'Tiro Bangla';
         width: 100%;
         font-style: italic;
+        font-size: 120px;
+        line-height: 140px;
         margin: 0;
+        width: fit-content;
         height: fit-content;
+        color: var(--secondary-color);
     }
     
     #hero .hero-title .container{
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
+       
     }
     
     #hero .hero-title .container .sign{
-        padding: 0 20px;
+        padding-right: 40px;
         font-family: 'Tiro Bangla';
         font-style: normal;
         font-weight: 400;
@@ -242,13 +255,9 @@
         display: none;
     }
     
-    #hero .hero-title .container .image{
-        margin-top: 20px;
-    }
-    
     #hero .hero-title .container .image img{
-        width: 860px;
-        height: 250px;
+        width: 805px;
+        height: 260px;
        
     }
     
@@ -256,7 +265,7 @@
         display: flex;
         justify-content: flex-end;
         font-weight: 600;
-        margin-top: 18px;
+       
         
     }
     #hero .tagline p{
@@ -264,6 +273,7 @@
         width: 400px;
         font-size: 30px;
         color: var(--secondary-color);
+        margin: 0;
         
     }
     
@@ -275,6 +285,7 @@
         background-color: var(--primary-color);
         height: 1400px;
         padding: 0 240px;
+        gap: 80px;
     }
     
     #btf .text{
@@ -282,6 +293,7 @@
         flex-direction: column;
         width: 100%;
         height: fit-content;
+        gap: 80px;
     }
     
     #btf .text .container{
@@ -323,7 +335,8 @@
         font-weight: 600;
         font-size: 40px;
         line-height: 50px;
-        margin: 80px 0 140px 0;
+        margin:0;
+        
     }
     
     #btf .container .column{
@@ -403,49 +416,89 @@
     #btf .skills{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin: 0;
-        margin-top: 40px;
-        padding: 0;
-        gap: 10px;
+        gap: 30px;
     }
-    
-    #btf .skills .title{
+   
+    #btf .skills .skills-title{
         display: flex;
-        flex-direction: row;
-        height: fit-content;
-        gap: 10px;
+        justify-content: flex-end;
     }
-    
-    #btf .skills .title .italic{
+
+    #btf .skills .skills-title p{
+        color: var(--secondary-color);
+        font-family: 'Tiro Bangla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 85px;
+        margin: 0;
+    }
+
+    #btf .skills .skills-title span{
         color: var(--secondary-color);
         font-family: 'Tiro Bangla';
         font-style: italic;
         font-weight: 400;
-        font-size: 30px;
+        font-size: 85px;
+        margin: 0;
     }
     
-    #btf .skills .item{
+    #btf .logos {
+        display: flex;
+        overflow: hidden;
+        background: var(--primary-color);
+        white-space: nowrap;
+        position: relative;
+    }
+      
+    #btf .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+      
+    #btf .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--primary-color));
+    }
+      
+    #btf .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--primary-color));
+    }
+      
+    #btf .logos:hover .logos-slide {
+        animation-play-state: paused;
+    }
+      
+    #btf .logos .logos-slide {
+        display: flex;
+        animation: 20s slide infinite linear;
+    }
+      
+    #btf .logos .logos-slide .item {
+        color: var(--secondary-color);
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
-        color: var(--secondary-color);
+        font-size: 85px;
+        margin: 0 40px;
     }
-    
-    
     
     #work{
         display: flex;
         flex-direction: column;
         background-color: var(--primary-color);
         width: 100%;
-        height: 3100px;
-        gap: 200px;
+        height: fit-content;
+        padding-bottom: 180px;
     }
     
     #work .selected-work{
-        padding: 0 360px;
+        padding: 100px 360px 100px 360px;
     }
     
     #work .title p{
@@ -488,130 +541,157 @@
         margin-top: 20px;
         text-align: end;
     }
-    
+
+
     #work .projects{
         display: flex;
-        flex-direction: column;
-        padding: 0 240px;
-        gap: 180px;
-    }
-    
-    #work .projects svg{
-        color: var(--secondary-color);
-      
-    }
-    
-    
-    
-    
-    
-    #work .project{
-        display: flex;
-        flex-direction: column;
-       
-    }
-    
-    #work .project-container{
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        height: 617px;
-    
-    }
-    
-    #work .project .text{
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        width: 450px;
-       
-    }
-    
-    #work .project .title{
-        color: var(--secondary-color);
-        font-style: normal;
-        font-weight: 600;
-        font-size: 100px;
-        margin: 0;
-        width: fit-content;
-    }
-    
-    
-    #work .subtitle{
-        color: var(--secondary-color);
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-       
-    }
-    
-    #work .paragraph{
-        display: flex;
-        justify-content: flex-end;
-        text-align: end;
-    }
-    
-    #work .paragraph p{
-        color: var(--secondary-color);
-        font-family: 'Tiro Bangla';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28px;
-        margin: 0;
-        width: 394px;
-    }
-    
-    #work .project .image{
-        display: flex;
-        align-items: flex-end;
-    }
-    
-    #work .project .image img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    #work .project .links{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-       
-        gap: 20px;
-        width: 450px;
-    }
-    
-    #work .project .links .link{
-        display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: 40px;
     }
-    
-    #work .project .links .link a{
+
+    #work img {
+        display: block;
+        max-width: 100%;
+    }
+  
+    .card {
         position: relative;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        color: var(--secondary-color);
+        width: 450px;
+        height: 700px;
+        background-color: #171717;
+        overflow: hidden;
+        margin: 0 
     }
-    
-    #work .project .links .link a::after{
-        content: "";
-        position: absolute;
-        background-color: var(--secondary-color);
-        height: 2px;
-        width: 0;
-        left: 0;
-        bottom: -5px;
-        transition: 0.5s ease;
-    }
-    
-    #work .project .links .link a:hover::after{
+
+    .card__image {
+        height: 100%;
         width: 100%;
+        object-fit: cover;
+        scale: 1.15;
+        transition: opacity 0.25s, scale 0.35s;
     }
+
+    .card:hover .card__image {
+        opacity: 0.1;
+        scale: 1;
+    }
+
+    .card__body {
+        position: absolute;
+        inset: 0;
+        padding: 50px;
+        color: #D6D6CE;
+        display: flex;
+        flex-direction: column;
+        
+        text-align: end;
+        
+    }
+
+    .card__body::before {
+        content: '';
+        position: absolute;
+        inset: 20px;
+        border: 2px solid #D6D6CE;
+        opacity: 0;
+        scale: 1.25;
+        transition: opacity 0.6s, scale 0.6s;
+    }
+
+    .card:hover .card__body::before {
+        opacity: 1;
+        scale: 1;
+    }
+
+    .card__title {
+        color: #D6D6CE;
+        font-size: 80px;
+        margin: 0;
+        margin-bottom: 30px;
+        
+    }
+
+    .card_subtitle{
+        color: #D6D6CE;
+        font-size: 20px;
+        opacity: 0;
+        translate: -25px;
+        transition: opacity 1s, translate 1s;
+        margin: 0;
+        margin-bottom: 20px;
+       
+    }
+
+    .card__description {
+        color: #D6D6CE;
+        font-size: 20px;
+        line-height: 30px;
+        font-family: 'Tiro Bangla';
+        opacity: 0;
+        translate: -25px;
+        transition: opacity 1s, translate 1s;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .card:hover .card__description {
+        opacity: 1;
+        translate: 0;
+    }
+
+    .card:hover .card_subtitle{
+        opacity: 1;
+        translate: 0;
+    }
+
+
+    .links{
+        display: flex;
+        z-index: 1;
+        gap: 40px;
+        justify-content: flex-end;
+    }
+
+    .link a{
+        color: #D6D6CE;
+        opacity: 0;
+        translate: -25px;
+        transition: opacity 1s, translate 1s;
+        margin-right: 5px;
+    }
+
+    .card:hover .link a{
+        opacity: 1;
+        translate: 0;
+    }
+
+    .link svg{
+        color: #D6D6CE;
+        opacity: 0;
+        translate: -25px;
+        transition: opacity 1s, translate 1s;
+    }
+
+    .card:hover .link svg{
+        opacity: 1;
+        translate: 0;
+
+    }
+    
+   
+
+   
+  
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -623,10 +703,10 @@
         display: flex;
         flex-direction: column;
         background-color: var(--primary-color);
-        height: 1500px;
-        width: fit-content;
-        padding-left: 460px;
-        padding-right: 480px;
+        height: fit-content;
+        
+        padding: 0 400px 0 460px;
+        
     }
     
     #about .container{
@@ -673,14 +753,15 @@
     
     
     #about .image img{
-        width: 450px;
-        height: 950px;
+        width: 500px;
+        height: 800px;
         margin-bottom: 20px;
     } 
     
     #about .paragraphs{
         display: flex;
         justify-content: flex-end;
+        width: auto;
     }
     
     #about .paragraph-1{
@@ -706,7 +787,7 @@
     #footer{
         background-color: var(--primary-color);
         width: 100%;
-        height: 600px;
+        height: 680px;
         display: flex;
         flex-direction: column;
         
@@ -716,8 +797,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-left: 460px;
-        padding-right: 380px;
+        padding: 140px 400px 140px 460px;
     }
     
     #footer .container  .title{
@@ -738,7 +818,6 @@
         font-size: 100px;
         color: var(--secondary-color);
         margin: 0;
-       
         width: fit-content;
     }
     
@@ -773,8 +852,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        
-        padding-top: 140px;
     }
     
     #footer .contact .nav{
@@ -909,15 +986,18 @@
     
         #hero .hero-title{
             margin-top: 40px;
-        }
-    
-        #hero .hero-title p{
-            font-size: 65px;
             padding: 0 20px;
         }
     
+        #hero .hero-title .title{
+            font-size: 65px;
+            
+        }
+    
         #hero .hero-title .italic{
-            margin: 20px 20px 0 0;
+            font-size: 65px;
+            line-height: normal;
+            
            
         }
     
@@ -956,9 +1036,10 @@
     
         #btf{
             padding: 120px 20px;
-            height: 1105px;
-            gap: 60px;
+            height: fit-content;
+            gap: 40px;
         }
+
         #btf .text{
             gap: 20px;
         }
@@ -1038,24 +1119,32 @@
             height: 11px;
             width: 11px;
         }
-    
+
         #btf .skills{
-            margin: 0;
-            gap: 5px;
-           
+            gap: 10px;
         }
-    
-        #btf .skills .item{
+
+        #btf .skills .skills-title p{
             font-size: 25px;
         }
-    
-        #btf .skills .title .italic{
+
+        #btf .skills .skills-title span{
             font-size: 25px;
+        }
+
+        #btf .logos .logos-slide .item{
+            font-size: 25px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 50px;
         }
     
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -1083,6 +1172,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -1161,6 +1251,7 @@
         #about .paragraphs{
             display: flex;
             flex-direction: column;
+            width: fit-content;
         }
     
         #about .paragraph-1{
@@ -1236,6 +1327,10 @@
     } 
     
     @media screen and (min-width:441px) and (max-width:543px) {
+
+        input:checked ~ .header .back-menu{
+            display: block;
+        }
     
         .header{
             padding: 0 20px;
@@ -1247,50 +1342,92 @@
             margin-right: auto
         }
     
-        .header .navbar{
-            display: none;
-        }
-    
         .header .dark-mode-btn{
             font-size: 14px;
             
         }
-    
-    
-        .header .navbar{
-            display: none;
+
+        .header .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--primary-color);
+            width: 100%;
+            height: 400px;
+            top: 60px;
+            left: 0;
+            margin: 0;
+            transform: translateX(130%);
+            border-bottom: var(--secondary-color) 2px solid;
+            z-index: -1;
+            transition: 1.1s ease;
+            padding: 0 20px;
         }
     
+        .header .navbar .nav-list .nav-item{
+            border-bottom: var(--secondary-color) 2px solid;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .header .navbar .nav-list .nav-item a{
+            font-size: 40px;
+        }
+    
+        .header .navbar .nav-list .nav-item a::after{
+            height: 0px;
+        }
+    
+    
+       
         .header .menu {
             display: block;
+            position: relative;
             color: var(--secondary-color);
             font-size: 14px;
             font-weight: 600;
             margin: 0;
-            padding-left: 20px;            
+            margin-left: 20px;            
+        }
     
+        .header .menu::after{   
+            content: "";
+            position: absolute;
+            background-color: var(--secondary-color);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s ease;
+        }
+        
+        .header .menu:hover::after{
+            width: 100%;
         }
         
     
         #hero{
             padding: 0;
-            padding-bottom: 40px;
             height: fit-content;
-           
+            
         }
     
         #hero .hero-title{
             margin-top: 40px;
-        }
-    
-        #hero .hero-title p{
-            font-size: 80px;
             padding: 0 20px;
         }
     
+        #hero .hero-title .title{
+            font-size: 70px;
+            
+        }
+    
         #hero .hero-title .italic{
-            margin: 20px 20px 0 0;
-           
+            font-size: 70px;
+            line-height: normal;
         }
     
         #hero .hero-title .span-3{
@@ -1328,8 +1465,8 @@
     
         #btf{
             padding: 120px 20px;
-            height: 1105px;
-            gap: 60px;
+            height: fit-content;
+            gap: 40px;
         }
         #btf .text{
             gap: 30px;
@@ -1424,10 +1561,32 @@
         #btf .skills .title .italic{
             font-size: 30px;
         }
+
+        #btf .skills{
+            gap: 10px;
+        }
+
+        #btf .skills .skills-title p{
+            font-size: 30px;
+        }
+
+        #btf .skills .skills-title span{
+            font-size: 30px;
+        }
+
+        #btf .logos .logos-slide .item{
+            font-size: 30px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 50px;
+        }
     
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -1455,6 +1614,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -1533,6 +1693,7 @@
         #about .paragraphs{
             display: flex;
             flex-direction: column;
+            width: fit-content;
         }
     
         #about .paragraph-1{
@@ -1607,7 +1768,11 @@
         }
     }
     
-    @media screen and (min-width:544px) and (max-width:644px) {
+    @media screen and (min-width:544px) and (max-width:650px) {
+
+        input:checked ~ .header .back-menu{
+            display: block;
+        }
     
         .header{
             padding: 0 30px;
@@ -1619,49 +1784,93 @@
             margin-right: auto
         }
     
-        .header .navbar{
-            display: none;
-        }
-    
         .header .dark-mode-btn{
             font-size: 16px;
             
         }
-    
-    
-        .header .navbar{
-            display: none;
+
+        .header .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--primary-color);
+            width: 100%;
+            height: 400px;
+            top: 60px;
+            left: 0;
+            margin: 0;
+            transform: translateX(130%);
+            border-bottom: var(--secondary-color) 2px solid;
+            z-index: -1;
+            transition: 1.1s ease;
+            padding: 0 30px;
         }
+    
+        .header .navbar .nav-list .nav-item{
+            border-bottom: var(--secondary-color) 2px solid;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .header .navbar .nav-list .nav-item a{
+            font-size: 40px;
+        }
+    
+        .header .navbar .nav-list .nav-item a::after{
+            height: 0px;
+        }
+    
+    
+        
     
         .header .menu {
             display: block;
+            position: relative;
             color: var(--secondary-color);
             font-size: 16px;
             font-weight: 600;
             margin: 0;
-            padding-left: 20px;            
+            margin-left: 20px;            
+        }
     
+        .header .menu::after{   
+            content: "";
+            position: absolute;
+            background-color: var(--secondary-color);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s ease;
+        }
+        
+        .header .menu:hover::after{
+            width: 100%;
         }
         
     
         #hero{
             padding: 0;
             height: fit-content;
-            padding-bottom: 40px;
+            
         }
     
         #hero .hero-title{
             margin-top: 40px;
+            padding: 0 20px;
         }
     
-        #hero .hero-title p{
-            font-size: 100px;
-            padding: 0 30px;
+        #hero .hero-title .title{
+            font-size: 90px;
+            
         }
     
         #hero .hero-title .italic{
-            margin: 20px 20px 0 0;
-           
+            font-size: 90px;
+            line-height: normal;
         }
     
         #hero .hero-title .span-3{
@@ -1700,7 +1909,7 @@
         #btf{
             padding: 120px 40px;
             height: fit-content;
-            gap: 60px;
+            gap: 40px;
         }
         #btf .text{
             gap: 30px;
@@ -1795,10 +2004,33 @@
         #btf .skills .title .italic{
             font-size: 30px;
         }
+
+        #btf .skills{
+            gap: 10px;
+        }
+
+        #btf .skills .skills-title p{
+            font-size: 35px;
+        }
+
+        #btf .skills .skills-title span{
+            font-size: 35px;
+        }
+
+        #btf .logos .logos-slide .item{
+            font-size: 35px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 50px;
+        }
+
     
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -1827,6 +2059,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -1870,12 +2103,12 @@
         }
     
         #about .title{
-            font-size: 70px;
+            font-size: 60px;
             line-height: 70px;
         }
     
         #about span{
-            font-size: 70px;
+            font-size: 60px;
         }
         #about .container{
             flex-direction: row;
@@ -1905,6 +2138,7 @@
         #about .paragraphs{
             display: flex;
             flex-direction: column;
+            width: fit-content;
         }
     
         #about .paragraph-1{
@@ -1980,7 +2214,11 @@
         }
     }
     
-    @media screen and (min-width:645px) and (max-width:834px) {
+    @media screen and (min-width:651px) and (max-width:834px) {
+
+        input:checked ~ .header .back-menu{
+            display: block;
+        }
     
         .header{
             padding: 0 40px;
@@ -1992,26 +2230,69 @@
             margin-right: auto
         }
     
-        .header .navbar{
-            display: none;
-        }
-    
         .header .dark-mode-btn{
             font-size: 18px; 
         }
-    
-        .header .navbar{
-            display: none;
+
+        .header .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--primary-color);
+            width: 100%;
+            height: 400px;
+            top: 60px;
+            left: 0;
+            margin: 0;
+            transform: translateX(130%);
+            border-bottom: var(--secondary-color) 2px solid;
+            z-index: -1;
+            transition: 1.1s ease;
+            padding: 0 40px;
         }
+    
+        .header .navbar .nav-list .nav-item{
+            border-bottom: var(--secondary-color) 2px solid;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .header .navbar .nav-list .nav-item a{
+            font-size: 40px;
+        }
+    
+        .header .navbar .nav-list .nav-item a::after{
+            height: 0px;
+        }
+    
+       
     
         .header .menu {
             display: block;
+            position: relative;
             color: var(--secondary-color);
             font-size: 18px;
             font-weight: 600;
             margin: 0;
-            padding-left: 40px;            
+            margin-left: 20px;            
+        }
     
+        .header .menu::after{   
+            content: "";
+            position: absolute;
+            background-color: var(--secondary-color);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s ease;
+        }
+        
+        .header .menu:hover::after{
+            width: 100%;
         }
         
     
@@ -2155,22 +2436,30 @@
         }
     
         #btf .skills{
-            margin: 0;
-            gap: 5px;
-           
+            gap: 10px;
         }
-    
-        #btf .skills .item{
-            font-size: 30px;
+
+        #btf .skills .skills-title p{
+            font-size: 45px;
         }
-    
-        #btf .skills .title .italic{
-            font-size: 30px;
+
+        #btf .skills .skills-title span{
+            font-size: 45px;
+        }
+
+        #btf .logos .logos-slide .item{
+            font-size: 45px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 50px;
         }
     
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -2199,6 +2488,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -2277,6 +2567,7 @@
         #about .paragraphs{
             display: flex;
             flex-direction: column;
+            width: fit-content;
         }
     
         #about .paragraph-1{
@@ -2353,6 +2644,10 @@
     }
     
     @media screen and (min-width:835px) and (max-width:950px) {
+
+        input:checked ~ .header .back-menu{
+            display: block;
+        }
     
         .header{
             padding: 0 40px;
@@ -2364,26 +2659,70 @@
             margin-right: auto
         }
     
-        .header .navbar{
-            display: none;
-        }
     
         .header .dark-mode-btn{
             font-size: 20px; 
         }
-    
-        .header .navbar{
-            display: none;
+        
+
+        .header .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--primary-color);
+            width: 100%;
+            height: 400px;
+            top: 60px;
+            left: 0;
+            margin: 0;
+            transform: translateX(130%);
+            border-bottom: var(--secondary-color) 2px solid;
+            z-index: -1;
+            transition: 1.1s ease;
+            padding: 0 40px;
         }
+    
+        .header .navbar .nav-list .nav-item{
+            border-bottom: var(--secondary-color) 2px solid;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .header .navbar .nav-list .nav-item a{
+            font-size: 40px;
+        }
+    
+        .header .navbar .nav-list .nav-item a::after{
+            height: 0px;
+        }
+      
     
         .header .menu {
             display: block;
+            position: relative;
             color: var(--secondary-color);
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             margin: 0;
-            padding-left: 40px;            
+            margin-left: 20px;            
+        }
     
+        .header .menu::after{   
+            content: "";
+            position: absolute;
+            background-color: var(--secondary-color);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s ease;
+        }
+        
+        .header .menu:hover::after{
+            width: 100%;
         }
         
     
@@ -2525,22 +2864,30 @@
         }
     
         #btf .skills{
-            margin: 0;
-            gap: 5px;
-           
+            gap: 10px;
         }
-    
-        #btf .skills .item{
-            font-size: 40px;
+
+        #btf .skills .skills-title p{
+            font-size: 50px;
         }
-    
-        #btf .skills .title .italic{
-            font-size: 40px;
+
+        #btf .skills .skills-title span{
+            font-size: 50px;
+        }
+
+        #btf .logos .logos-slide .item{
+            font-size: 50px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 50px;
         }
     
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -2569,6 +2916,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -2657,6 +3005,7 @@
         #about .paragraphs{
             display: flex;
             justify-content: flex-end;
+            width: auto;
         }
     
         #about .paragraph-1{
@@ -2666,8 +3015,8 @@
         #about .paragraph-2{
             font-size: 22px;
             line-height: 32px;
-            padding-left: 0;
-            width: 610px;
+            padding-left: 260px;
+            width: auto
         }
     
         #footer{
@@ -2725,6 +3074,10 @@
     }
     
     @media screen and (min-width:951px) and (max-width:1024px) {
+
+        input:checked ~ .header .back-menu{
+            display: block;
+        }
     
         .header{
             padding: 0 40px;
@@ -2736,26 +3089,69 @@
             margin-right: auto
         }
     
-        .header .navbar{
-            display: none;
-        }
-    
         .header .dark-mode-btn{
             font-size: 20px; 
         }
-    
-        .header .navbar{
-            display: none;
+
+        .header .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--primary-color);
+            width: 100%;
+            height: 400px;
+            top: 60px;
+            left: 0;
+            margin: 0;
+            transform: translateX(130%);
+            border-bottom: var(--secondary-color) 2px solid;
+            z-index: -1;
+            transition: 1.1s ease;
+            padding: 0 40px;
         }
+    
+        .header .navbar .nav-list .nav-item{
+            border-bottom: var(--secondary-color) 2px solid;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .header .navbar .nav-list .nav-item a{
+            font-size: 40px;
+        }
+    
+        .header .navbar .nav-list .nav-item a::after{
+            height: 0px;
+        }
+    
+       
     
         .header .menu {
             display: block;
+            position: relative;
             color: var(--secondary-color);
             font-size: 20px;
             font-weight: 600;
             margin: 0;
-            padding-left: 40px;            
+            margin-left: 20px;            
+        }
     
+        .header .menu::after{   
+            content: "";
+            position: absolute;
+            background-color: var(--secondary-color);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s ease;
+        }
+        
+        .header .menu:hover::after{
+            width: 100%;
         }
         
     
@@ -2897,22 +3293,30 @@
         }
     
         #btf .skills{
-            margin: 0;
-            gap: 5px;
-           
+            gap: 10px;
         }
-    
-        #btf .skills .item{
-            font-size: 40px;
+
+        #btf .skills .skills-title p{
+            font-size: 55px;
         }
-    
-        #btf .skills .title .italic{
-            font-size: 40px;
+
+        #btf .skills .skills-title span{
+            font-size: 55px;
         }
-    
+
+        #btf .logos .logos-slide .item{
+            font-size: 55px;
+            margin: 0 20px;
+        }
+
+        #btf .logos:before, .logos:after{
+            width: 80px;
+        }
+
         #work{
             gap: 80px;
             height: fit-content;
+            padding-bottom: 0;
         }
     
         #work .selected-work{
@@ -2941,6 +3345,7 @@
         }
     
         #work .projects{
+            display: none;
             padding: 0 20px;
             gap: 80px;
         }
@@ -3029,6 +3434,7 @@
         #about .paragraphs{
             display: flex;
             justify-content: flex-end;
+            width: fit-content;
         }
     
         #about .paragraph-1{
@@ -3038,8 +3444,8 @@
         #about .paragraph-2{
             font-size: 22px;
             line-height: 35px;
-            padding-left: 0;
-            width: 610px;
+            padding-left: 270px;
+            width: auto
         }
     
         #footer{
@@ -3095,6 +3501,743 @@
             line-height: 30px;
         }
     }
+
+@media screen and (min-width:1025px) and (max-width:1200px){
+
+    .header{
+        padding: 0 60px;
+    }
+
+    #hero{
+        padding: 0 60px;
+        height: fit-content;
+    }
+
+    #hero .hero-title{
+        margin-top: 80px;
+    }
+
+    #hero .hero-title .title{
+        font-size: 90px;
+        
+    }
+
+    #hero .hero-title .italic{
+        width: 70%;
+        font-size: 90px;
+        line-height: 110px;
+    }
+
+    #hero .hero-title .span-3{
+        margin-top: -80px;
+    }
+
+    #hero .hero-title .container .image{
+        margin-top: 30px;
+        width: 70%;
+        
+    }
+
+    #hero .hero-title .container .image img{
+        width: 100%;
+        height: 165px;
+    }
+
+    #hero .tagline p{
+        font-size: 20px;
+        width: 280px;
+        margin: 0;
+    }
+
+    #hero .hero-title p{
+        font-size: 90px;
+    }
+    
+    #btf{
+        padding: 140px 60px;
+        gap: 80px;
+        height: fit-content;
+    }
+
+    #btf .text{
+        gap: 20px;
+    }
+
+    #btf .text .title{
+        font-size: 70px;
+    }
+
+    #btf .text .italic{
+        font-size: 70px;
+    }
+
+    #btf .text .paragraph p{
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0;
+        padding-left: 250px;
+    }
+
+    #btf .title{
+        font-size: 60px;
+        height: fit-content;
+    }
+
+    #btf .container .column .italic{
+        font-size: 55px;
+        height: fit-content;
+        margin-top: -10px;
+    }
+
+    #btf .container .row-1{
+        padding-left: 160px;
+        height: 100px;
+        gap: 10px;
+    }
+
+    #btf .container .row .transform p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2{
+        padding-left: 100px;
+        height: 100px;
+        gap: 30px;
+    }
+
+    #btf .container .row-2 .icon p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2 .icon svg{
+        height: 25px;
+        width: 25px;
+    }
+
+    #btf .skills{
+        gap: 10px;
+    }
+
+    #btf .skills .skills-title p{
+        font-size: 60px;
+    }
+
+    #btf .skills .skills-title span{
+        font-size: 60px;
+    }
+
+    #btf .logos .logos-slide .item{
+        font-size: 60px;
+        margin: 0 20px;
+    }
+
+    #btf .logos:before, .logos:after{
+        width: 100px;
+    }
+
+    #work{
+        padding: 0 60px;
+    }
+
+    #work .selected-work{
+        padding: 0 120px;
+       
+    }
+
+    #work .title p{
+        font-size: 70px;
+    }
+
+    #work .container .italic{
+        font-size: 70px;
+    }
+
+    #work .container p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #work .projects{
+        padding: 100px 0;
+    }
+
+    
+
+    .card__title{
+        font-size: 40px;
+    }
+
+    .card__description{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    #about{
+        justify-content: center;
+        align-items: center;
+        padding:0 120px
+    }
+
+    #about .container{
+        gap: 20px;
+    }
+
+    #about .image img{
+        width: 400px;
+    }
+
+    #about .container .paragraph{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #about .paragraphs{
+        width: 859px;
+    }
+  
+    #about .paragraph-2{
+        font-size: 18px;
+        line-height: 28px;
+        padding-left: 320px;
+        width: auto;
+    }
+
+   
+
+    #about .title, .title_2{
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    #about span{
+        font-size: 60px;
+    }
+
+
+    #footer{
+        padding: 0 60px;
+        height: 580px
+    }
+
+    #footer .container{
+        padding: 120px 60px;
+        width: fit-content;
+        gap: 100px;
+    }
+
+    #footer .container .title{
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    #footer .container span{
+        font-size: 70px;
+    }
+
+    #footer .contact{
+        justify-content: space-between;
+    }
+
+    #footer .contact .nav{
+        padding: 0;
+    }
+
+    #footer .contact .copyright, a, .thanks{
+        font-size: 14px;
+    }
+
+    
+}
+
+@media screen and (min-width:1201px) and (max-width:1400px){
+
+    .header{
+        padding: 0 80px;
+    }
+
+    #hero{
+        padding: 0 60px;
+        height: fit-content;
+    }
+
+    #hero .hero-title{
+        margin-top: 80px;
+    }
+
+    #hero .hero-title .title{
+        font-size: 100px;
+        
+    }
+
+    #hero .hero-title .italic{
+        width: 70%;
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    #hero .hero-title .span-3{
+        margin-top: -80px;
+    }
+
+    #hero .hero-title .container .image{
+        margin-top: 30px;
+        width: 90%;
+        
+    }
+
+    #hero .hero-title .container .image img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #hero .tagline p{
+        font-size: 20px;
+        width: 280px;
+        margin: 0;
+    }
+
+    #hero .hero-title p{
+        font-size: 90px;
+    }
+    
+    #btf{
+        padding: 140px 60px;
+        gap: 80px;
+        height: fit-content;
+    }
+
+    #btf .text{
+        gap: 20px;
+    }
+
+    #btf .text .title{
+        font-size: 80px;
+    }
+
+    #btf .text .italic{
+        font-size: 80px;
+    }
+
+    #btf .text .paragraph p{
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0;
+        padding-left: 250px;
+    }
+
+    #btf .title{
+        font-size: 65px;
+        height: fit-content;
+    }
+
+    #btf .container .column .italic{
+        font-size: 65px;
+        height: fit-content;
+        margin-top: -10px;
+    }
+
+    #btf .container .row-1{
+        padding-left: 240px;
+        height: 100px;
+        gap: 10px;
+    }
+
+    #btf .container .row .transform p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2{
+        padding-left: 120px;
+        height: 100px;
+        gap: 30px;
+    }
+
+    #btf .container .row-2 .icon p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2 .icon svg{
+        height: 25px;
+        width: 25px;
+    }
+
+    #btf .skills{
+        gap: 10px;
+    }
+
+    #btf .skills .skills-title p{
+        font-size: 65px;
+    }
+
+    #btf .skills .skills-title span{
+        font-size: 65px;
+    }
+
+    #btf .logos .logos-slide .item{
+        font-size: 65px;
+        margin: 0 30px;
+    }
+
+    #btf .logos:before, .logos:after{
+        width: 80px;
+    }
+
+    #work{
+        padding: 0 60px;
+    }
+
+    #work .selected-work{
+        padding: 0 120px;
+       
+    }
+
+    #work .title p{
+        font-size: 80px;
+    }
+
+    #work .container .italic{
+        font-size: 80px;
+    }
+
+    #work .container p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #work .projects{
+        padding: 100px 0;
+    }
+
+    
+
+    .card__title{
+        font-size: 60px;
+    }
+
+    .card__description{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #about{
+        justify-content: center;
+        align-items: center;
+        padding:0 220px
+    }
+
+    #about .container{
+      
+        gap: 20px;
+    }
+
+    #about .image img{
+        width: 400px;
+    }
+
+    #about .container .paragraph{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #about .paragraphs{
+        width: 859px;
+    }
+    #about .paragraph-2{
+        font-size: 18px;
+        line-height: 28px;
+       
+    }
+
+    #about .title, .title_2{
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    #about span{
+        font-size: 60px;
+    }
+
+
+    #footer{
+        padding: 0 120px;
+        height: 620px
+    }
+
+    #footer .container{
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        
+    }
+
+    #footer .container .title{
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    #footer .container span{
+        font-size: 70px;
+    }
+
+    #footer .contact{
+        justify-content: space-between;
+    }
+
+    #footer .contact .nav{
+        padding: 0;
+    }
+
+    #footer .contact .copyright, a, .thanks{
+        font-size: 14px;
+    }
+
+    
+}
+
+@media screen and (min-width:1401px) and (max-width:1800px){
+
+    .header{
+        padding: 0 180px;
+    }
+
+    #hero{
+        padding: 0 160px;
+        height: fit-content;
+    }
+
+    #hero .hero-title{
+        margin-top: 80px;
+    }
+
+    #hero .hero-title .title{
+        font-size: 100px;
+        
+    }
+
+    #hero .hero-title .italic{
+        width: 70%;
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    #hero .hero-title .span-3{
+        margin-top: -80px;
+    }
+
+    #hero .hero-title .container .image{
+        margin-top: 30px;
+        width: 90%;
+        
+    }
+
+    #hero .hero-title .container .image img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #hero .tagline p{
+        font-size: 20px;
+        width: 280px;
+        margin: 0;
+    }
+
+    #hero .hero-title p{
+        font-size: 90px;
+    }
+    
+    #btf{
+        padding: 140px 180px;
+        gap: 80px;
+        height: fit-content;
+    }
+
+    #btf .text{
+        gap: 20px;
+    }
+
+    #btf .text .title{
+        font-size: 80px;
+    }
+
+    #btf .text .italic{
+        font-size: 80px;
+    }
+
+    #btf .text .paragraph p{
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0;
+        padding-left: 250px;
+    }
+
+    #btf .title{
+        font-size: 65px;
+        height: fit-content;
+    }
+
+    #btf .container .column .italic{
+        font-size: 65px;
+        height: fit-content;
+        margin-top: -10px;
+    }
+
+    #btf .container .row-1{
+        padding-left: 240px;
+        height: 100px;
+        gap: 10px;
+    }
+
+    #btf .container .row .transform p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2{
+        padding-left: 120px;
+        height: 100px;
+        gap: 30px;
+    }
+
+    #btf .container .row-2 .icon p{
+        font-size: 20px;
+    }
+
+    #btf .container .row-2 .icon svg{
+        height: 25px;
+        width: 25px;
+    }
+
+    #btf .skills{
+        gap: 10px;
+    }
+
+    #btf .skills .skills-title p{
+        font-size: 65px;
+    }
+
+    #btf .skills .skills-title span{
+        font-size: 65px;
+    }
+
+    #btf .logos .logos-slide .item{
+        font-size: 65px;
+        margin: 0 30px;
+    }
+
+    #btf .logos:before, .logos:after{
+        width: 80px;
+    }
+
+    #work{
+        padding: 0 60px;
+    }
+
+    #work .selected-work{
+        padding: 0 120px;
+       
+    }
+
+    #work .title p{
+        font-size: 80px;
+    }
+
+    #work .container .italic{
+        font-size: 80px;
+    }
+
+    #work .container p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #work .projects{
+        padding: 100px 0;
+    }
+
+    
+
+    .card__title{
+        font-size: 75px;
+    }
+
+    .card__description{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #about{
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #about .container{
+      
+        gap: 20px;
+    }
+
+    #about .image img{
+        width: 400px;
+    }
+
+    #about .container .paragraph{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #about .paragraphs{
+        width: 859px;
+    }
+    #about .paragraph-2{
+        font-size: 18px;
+        line-height: 28px;
+       
+    }
+
+    #about .title, .title_2{
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    #about span{
+        font-size: 60px;
+    }
+
+
+    #footer{
+        padding: 0 180px;
+        height: 620px
+    }
+
+    #footer .container{
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        
+    }
+
+    #footer .container .title{
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    #footer .container span{
+        font-size: 70px;
+    }
+
+    #footer .contact{
+        justify-content: space-between;
+    }
+
+    #footer .contact .nav{
+        padding: 0;
+    }
+
+    #footer .contact .copyright, a, .thanks{
+        font-size: 14px;
+    }
+
+    
+}
 
             
     

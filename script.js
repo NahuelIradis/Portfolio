@@ -16,10 +16,10 @@ button.onclick = function(){
 
     if(document.body.classList.contains("dark-theme")){
 
-        button.innerText=("LIGHT THEME");
+        button.innerText=("LIGHT");
 
     } else {
-        button.innerText=("DARK THEME");
+        button.innerText=("DARK");
     }
 }
 
@@ -34,3 +34,7 @@ function toggleMenu() {
   }
   
   document.getElementById("menu").addEventListener("click", toggleMenu);
+
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
